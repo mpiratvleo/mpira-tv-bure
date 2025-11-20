@@ -46,6 +46,10 @@
       font-weight: 600;
       font-size: 18px;
       transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
     
     .btn:hover {
@@ -138,8 +142,12 @@
       font-size: 1.2rem;
       border-radius: 12px;
       font-weight: 600;
-      min-width: 280px;
+      min-width: 320px;
       max-width: 100%;
+    }
+    
+    .android-icon {
+      font-size: 1.4rem;
     }
     
     /* Screenshots carousel */
@@ -350,9 +358,7 @@
       </div>
       <div class="app-info">
         <h1 class="app-title">Baraka Mpenja TV - Angalia Mpira LIVE</h1>
-        <p class="app-developer">
-          <a href="javascript:void(0)" onclick="location.reload()">Sports App</a>
-        </p>
+        <!-- Sports App link removed -->
       </div>
     </div>
     
@@ -372,10 +378,13 @@
       </div>
     </div>
 
-    <!-- Download Section -->
+    <!-- Download Section with Android Icon -->
     <div class="download-section">
       <a href="https://github.com/mpiratvleo/dk90live/raw/refs/heads/main/Baraka-MpenjaTV.apk">
-        <button class="btn download-button">Bonyeza Hapa Ku Download App</button>
+        <button class="btn download-button">
+          <span class="material-icons android-icon">android</span>
+          Bonyeza Hapa Ku Download App
+        </button>
       </a>
     </div>
 
