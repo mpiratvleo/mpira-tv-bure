@@ -145,6 +145,9 @@
       padding-left: 24px;
       padding-right: 24px;
       white-space: nowrap;
+      font-size: 18px;
+      padding-top: 12px;
+      padding-bottom: 12px;
     }
     
     /* Smaller screenshot height */
@@ -155,23 +158,50 @@
       object-fit: cover;
     }
     
+    /* Larger fonts for desktop */
     @media screen and (min-width: 854px) {
       .small-icon {
         display: none;
       }
       .title-size {
-        font-size: 300%;
+        font-size: 320%;
       }
     }
+
+    /* MUCH LARGER FONTS FOR MOBILE */
     @media screen and (max-width: 854px) {
       .large-icon {
         display: none;
       }
       .title-size {
-        font-size: 150%;
+        font-size: 220%; /* Increased from 150% */
       }
       .img-slider {
         height: 300px;
+      }
+      
+      /* Larger app details on mobile */
+      .app-detail-value {
+        font-size: 22px; /* Larger on mobile */
+      }
+      .app-detail-label {
+        font-size: 16px; /* Larger on mobile */
+      }
+      
+      /* Larger feature list on mobile */
+      .feature-list p {
+        font-size: 18px; /* Larger feature text */
+        margin-bottom: 12px;
+      }
+      
+      /* Larger section headers */
+      h5 {
+        font-size: 24px;
+      }
+      
+      /* Larger body text */
+      body {
+        font-size: 18px;
       }
     }
     
@@ -188,18 +218,18 @@
     /* Responsive adjustments for very small screens - KEEP HORIZONTAL */
     @media screen and (max-width: 576px) {
       .app-details-container {
-        flex-wrap: nowrap; /* Changed from wrap to nowrap */
+        flex-wrap: nowrap;
       }
       .app-detail-item {
         min-width: 33.33%;
         flex: 0 0 33.33%;
-        padding: 8px 3px;
+        padding: 12px 5px; /* Increased padding */
       }
       .app-detail-value {
-        font-size: 16px;
+        font-size: 20px; /* Even larger on very small screens */
       }
       .app-detail-label {
-        font-size: 12px;
+        font-size: 15px; /* Even larger on very small screens */
       }
       .download-section {
         flex-wrap: wrap;
@@ -211,46 +241,56 @@
       .download-button {
         width: auto;
         max-width: 100%;
+        font-size: 20px; /* Larger button text */
+        padding: 15px 30px; /* Larger button */
       }
       .img-slider {
-        height: 250px;
+        height: 280px; /* Slightly larger on mobile */
+      }
+      
+      /* Even larger fonts for very small screens */
+      .title-size {
+        font-size: 200%;
+      }
+      .feature-list p {
+        font-size: 17px;
+      }
+      body {
+        font-size: 17px;
       }
     }
     
     /* Extra small screens - STILL HORIZONTAL */
     @media screen and (max-width: 400px) {
       .app-details-container {
-        flex-wrap: nowrap; /* Keep horizontal */
+        flex-wrap: nowrap;
       }
       .app-detail-item {
         min-width: 33.33%;
         flex: 0 0 33.33%;
-        padding: 6px 2px;
+        padding: 10px 3px;
       }
       .app-detail-value {
-        font-size: 14px;
+        font-size: 18px;
       }
       .app-detail-label {
-        font-size: 11px;
+        font-size: 14px;
+      }
+      .download-button {
+        font-size: 18px;
+        padding: 12px 25px;
       }
     }
   </style>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg bg-body-tertiary" style="margin-top: -10px;">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="./">
-        <img src="https://cdn-icons-png.flaticon.com/512/732/732208.png" alt="Mpira TV BURE" width="34" height="34">
-      </a>
-      <!-- Removed Solodroid text and search icon -->
-    </div>
-  </nav>
+  <!-- COMPLETELY REMOVED NAVIGATION BAR -->
 
   <div class="container">
     <div class="row">
       <div class="col-md-10">
-        <div style="margin-top: 50px;"></div>
+        <div style="margin-top: 30px;"></div>
 
         <table>
           <tr>
