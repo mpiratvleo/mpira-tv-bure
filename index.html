@@ -106,7 +106,7 @@
       background-color: white;
     }
     
-    /* App details section styling */
+    /* App details section styling - ALWAYS HORIZONTAL */
     .app-details-container {
       display: flex;
       justify-content: space-between;
@@ -116,7 +116,7 @@
     .app-detail-item {
       text-align: center;
       flex: 1;
-      min-width: 100px;
+      min-width: 80px;
       padding: 10px 5px;
     }
     .app-detail-value {
@@ -185,14 +185,21 @@
       padding-left: 0;
     }
     
-    /* Responsive adjustments for very small screens */
+    /* Responsive adjustments for very small screens - KEEP HORIZONTAL */
     @media screen and (max-width: 576px) {
       .app-details-container {
-        flex-wrap: wrap;
+        flex-wrap: nowrap; /* Changed from wrap to nowrap */
       }
       .app-detail-item {
         min-width: 33.33%;
         flex: 0 0 33.33%;
+        padding: 8px 3px;
+      }
+      .app-detail-value {
+        font-size: 16px;
+      }
+      .app-detail-label {
+        font-size: 12px;
       }
       .download-section {
         flex-wrap: wrap;
@@ -210,21 +217,21 @@
       }
     }
     
+    /* Extra small screens - STILL HORIZONTAL */
     @media screen and (max-width: 400px) {
+      .app-details-container {
+        flex-wrap: nowrap; /* Keep horizontal */
+      }
       .app-detail-item {
-        min-width: 100%;
-        flex: 0 0 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 15px;
-        border-bottom: 1px solid #eee;
+        min-width: 33.33%;
+        flex: 0 0 33.33%;
+        padding: 6px 2px;
       }
-      .app-detail-item:last-child {
-        border-bottom: none;
+      .app-detail-value {
+        font-size: 14px;
       }
-      .app-detail-value, .app-detail-label {
-        margin: 0;
+      .app-detail-label {
+        font-size: 11px;
       }
     }
   </style>
@@ -255,7 +262,7 @@
           </tr>
         </table>
         
-        <!-- Responsive app details section - always side by side -->
+        <!-- Responsive app details section - ALWAYS HORIZONTAL -->
         <div class="app-details-container margin-top-small">
           <div class="app-detail-item">
             <div class="app-detail-value">4.8 <span class="material-icons inline-icon-sm">star</span></div>
